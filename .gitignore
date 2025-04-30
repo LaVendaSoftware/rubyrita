@@ -41,4 +41,9 @@
 /coverage/*
 !/coverage/.keep
 
+# Craby
 .rspec_status
+
+# Kamal
+/.kamal/secrets*
+!/.kamal/secrets.example
