@@ -1,0 +1,52 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  packages: write
+  actions: read
+
+jobs:
+  deploy:
+    name: 🚀 Deploy on Hetzner
+    runs-on: ubuntu-24.04
+    permissions: write-all
+
+    steps:
+      - name: ⏬️ Checkout code
+        uses: actions/checkout@v4
+
+      - name: 📦 Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler: default
+          bundler-cache: true
+          ruby-version: .ruby-version
+
+      - name: 💎 Verify ruby version
+        run: ruby --version
+
+      - name: 🔑 Login on GitHub Container Registry (GHCR)
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: lavendasoftware
+          password: ${{ secrets.KAMAL_REGISTRY_PASSWORD }}
+
+      - name: 📝 Create credentials production key file
+        run: echo "${{ secrets.RAILS_MASTER_KEY }}" > config/credentials/production.key
+
+      - name: 📝 Create kamal secrets file
+        run: echo "${{ secrets.KAMAL_SECRETS_FILE }}" > .kamal/secrets
+
+      - name: 🛠️ Configurar SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+
+      - name: 🚀 Deploy on Hetzner
+        run: bin/bundle exec kamal deploy -v
