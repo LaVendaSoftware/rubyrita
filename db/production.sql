@@ -1,0 +1,4 @@
+create database rubyrita_production;
+create database rubyrita_cache_production;
+create database rubyrita_queue_production;
+create database rubyrita_cable_production;
