@@ -48,3 +48,8 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 end
+
+# https://www.phlex.fun/introduction
+gem "phlex-rails", "~> 2.2"
+# https://github.com/gjtorikian/tailwind_merge?tab=readme-ov-file#usage
+gem "tailwind_merge", "~> 1.2"
