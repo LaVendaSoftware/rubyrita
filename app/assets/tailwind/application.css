@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+@layer utilities {
+  html[data-platform="turbo-native"] .turbo-native\:hidden {
+    @apply hidden;
+  }
+
+  html[data-platform="turbo-native"] .web\:hidden {
+    @apply block;
+  }
+
+  html:not([data-platform="turbo-native"]) .turbo-native\:hidden {
+    @apply block;
+  }
+
+  html:not([data-platform="turbo-native"]) .web\:hidden {
+    @apply hidden;
+  }
+}
