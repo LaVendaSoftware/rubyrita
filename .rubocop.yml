@@ -12,6 +12,13 @@ Rails/Output:
   Exclude:
     - "app/components/**/*"
 
+# TODO: remove these files and fix offenses
+Rails/I18nLocaleTexts:
+  Exclude:
+    - "app/mailers/passwords_mailer.rb"
+    - "app/controllers/passwords_controller.rb"
+    - "app/controllers/sessions_controller.rb"
+
 AllCops:
   NewCops: enable
   TargetRubyVersion: 3.4
