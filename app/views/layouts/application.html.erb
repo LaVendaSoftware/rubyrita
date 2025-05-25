@@ -23,8 +23,14 @@
   </head>
 
   <body>
-    <main>
-      <%= yield %>
+    <main class="min-h-screen flex flex-col">
+      <%= render(Components::Layout::Navbar.new) %>
+
+      <div class="flex-1">
+        <%= yield %>
+      </div>
+
+      <%= render(Components::Layout::Footer.new) %>
     </main>
   </body>
 </html>
