@@ -35,9 +35,8 @@ erb-lint:
 erb-lint-fix:
 	bin/erb_lint app/views --autocorrect
 
-# # TODO: uncomment when setup biome
-# biome:
-# 	bin/biome
+biome:
+	bin/biome
 
-# biome-fix:
-# 	bin/biome --write
+biome-fix:
+	bin/biome --write

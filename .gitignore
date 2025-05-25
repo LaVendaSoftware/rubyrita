@@ -47,3 +47,10 @@
 # Kamal
 /.kamal/secrets*
 !/.kamal/secrets.example
+
+# Biome
+/node_modules/*
+!/node_modules/.keep
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
