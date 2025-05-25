@@ -40,9 +40,16 @@ group :development, :test do
   gem "craby", "~> 0.0.5"
   # https://github.com/railsjazz/rails_live_reload#usage
   gem "rails_live_reload", "~> 0.4.0"
+  # https://rubyui.com/docs/introduction
+  gem "ruby_ui", "~> 1.0", require: false
 end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 end
+
+# https://www.phlex.fun/introduction
+gem "phlex-rails", "~> 2.2"
+# https://github.com/gjtorikian/tailwind_merge?tab=readme-ov-file#usage
+gem "tailwind_merge", "~> 1.2"
