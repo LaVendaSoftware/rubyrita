@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -o errexit
+
+bun lint $@
+bun format $@
+bun check $@
+
+echo "✅ No errors were found in JS files"

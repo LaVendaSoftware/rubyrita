@@ -51,6 +51,27 @@ jobs:
 
       - name: Run ERB Linter
         run: bin/erb_lint app --format compact
+  biome:
+    name: Biome.js
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: ⏬️ Checkout code
+        uses: actions/checkout@v4
+
+      - name: 📦 Set up Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: 🍞 Verify bun version
+        run: bun --version
+
+      - name: 🍞 Install dependencies
+        run: bun install
+
+      - name: 🧪 Run Biome Linter
+        run: bin/biome
 
   rspec:
     name: RSpec

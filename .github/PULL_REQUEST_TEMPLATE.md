@@ -1,22 +1,23 @@
 # Changes requested
 
 ## I'm submitting a...
-- [ ] Bug report
-- [ ] Feature request
+- [ ] Bug fix
+- [ ] New feature
+- [ ] Other...
 
 ## Checklist
-- [ ] Test new features
+- [ ] I tested my changes
+- [ ] I've implemented tests that confirm my changes
 - [ ] I Confirm this code is stable and does not break existing production application
 
 ## Summary
-This PR adds...
+This PR add...
 
-## Changes
-
+## Major changes
 1. ...
 
 ## How to Test
-...
+1. ...
 
 ## Additional Notes
 ...
