@@ -325,6 +325,7 @@ GEM
     rdoc (6.14.0)
       erb
       psych (>= 4.0.0)
+    redcarpet (3.6.1)
     regexp_parser (2.10.0)
     reline (0.6.1)
       io-console (~> 0.5)
@@ -505,6 +506,7 @@ DEPENDENCIES
   puma (>= 5.0)
   rails (~> 8.0.2)
   rails_live_reload (~> 0.4.0)
+  redcarpet (~> 3.6)
   ruby_ui (~> 1.0)
   stimulus-rails
   tailwind_merge (~> 1.2)
