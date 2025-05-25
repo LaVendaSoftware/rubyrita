@@ -8,6 +8,10 @@ plugins:
 inherit_gem:
   standard: config/base.yml
 
+Rails/Output:
+  Exclude:
+    - "app/components/**/*"
+
 AllCops:
   NewCops: enable
   TargetRubyVersion: 3.4
