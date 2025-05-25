@@ -9,5 +9,8 @@ ActiveRecord::Base.transaction do
     password: "developer@rubyrita.com.br"
   )
 
+  puts "* Create article categories"
+  ArticleCategory.create!(title: "Ruby")
+
   puts "✅ Seed finished successfully"
 end
