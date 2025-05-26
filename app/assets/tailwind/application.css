@@ -3,11 +3,27 @@
 @plugin "@tailwindcss/forms";
 @plugin "@tailwindcss/typography";
 
-
 @import "../../../vendor/javascript/tw-animate-css.js";
 
-
 @custom-variant dark (&:is(.dark *));
+
+@layer utilities {
+  html[data-platform="turbo-native"] .turbo-native\:hidden {
+    @apply hidden;
+  }
+
+  html[data-platform="turbo-native"] .web\:hidden {
+    @apply block;
+  }
+
+  html:not([data-platform="turbo-native"]) .turbo-native\:hidden {
+    @apply block;
+  }
+
+  html:not([data-platform="turbo-native"]) .web\:hidden {
+    @apply hidden;
+  }
+}
 
 :root {
   --background: oklch(1 0 0);
