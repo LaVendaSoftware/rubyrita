@@ -3,11 +3,66 @@
 @plugin "@tailwindcss/forms";
 @plugin "@tailwindcss/typography";
 
-
 @import "../../../vendor/javascript/tw-animate-css.js";
 
-
 @custom-variant dark (&:is(.dark *));
+
+@layer utilities {
+  html[data-platform="turbo-native"] .turbo-native\:hidden {
+    @apply hidden;
+  }
+
+  html[data-platform="turbo-native"] .web\:hidden {
+    @apply block;
+  }
+
+  html:not([data-platform="turbo-native"]) .turbo-native\:hidden {
+    @apply block;
+  }
+
+  html:not([data-platform="turbo-native"]) .web\:hidden {
+    @apply hidden;
+  }
+}
+
+@layer base {
+  .article-content {
+    @apply break-all;
+  }
+
+  .article-content h1 {
+    @apply text-4xl font-bold;
+  }
+
+  .article-content h2 {
+    @apply text-3xl font-semibold;
+  }
+
+  .article-content h3 {
+    @apply text-2xl font-semibold;
+  }
+
+  .article-content p {
+    @apply text-base text-gray-800;
+  }
+
+  .article-content a {
+    @apply text-blue-600 underline hover:text-blue-800 inline-block max-w-full truncate overflow-hidden whitespace-nowrap;
+
+  }
+
+  .article-content ul {
+    @apply list-disc pl-6;
+  }
+
+  .article-content ol {
+    @apply list-decimal pl-6;
+  }
+
+  .article-content blockquote {
+    @apply italic border-l-4 border-gray-300 pl-4 text-gray-600;
+  }
+}
 
 :root {
   --background: oklch(1 0 0);

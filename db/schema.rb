@@ -10,9 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_05_25_092119) do
+ActiveRecord::Schema[8.0].define(version: 2025_05_25_210657) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
+
+  create_table "article_categories", force: :cascade do |t|
+    t.string "slug", default: "", null: false
+    t.string "title", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["slug"], name: "index_article_categories_on_slug", unique: true
+    t.index ["title"], name: "index_article_categories_on_title", unique: true
+  end
+
+  create_table "articles", force: :cascade do |t|
+    t.bigint "category_id", null: false
+    t.string "slug", default: "", null: false
+    t.string "title", default: "", null: false
+    t.text "content", default: "", null: false
+    t.datetime "publish_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_articles_on_category_id"
+    t.index ["slug"], name: "index_articles_on_slug", unique: true
+    t.index ["title"], name: "index_articles_on_title", unique: true
+  end
 
   create_table "sessions", force: :cascade do |t|
     t.bigint "user_id", null: false
@@ -32,5 +54,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_25_092119) do
     t.index ["email_address"], name: "index_users_on_email_address", unique: true
   end
 
+  add_foreign_key "articles", "article_categories", column: "category_id"
   add_foreign_key "sessions", "users"
 end
