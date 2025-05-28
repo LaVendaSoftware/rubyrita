@@ -52,7 +52,7 @@ group :development do
 end
 
 # https://www.phlex.fun/introduction
-gem "phlex-rails", "~> 2.2"
+gem "phlex-rails", "~> 2.3"
 # https://github.com/gjtorikian/tailwind_merge?tab=readme-ov-file#usage
 gem "tailwind_merge", "~> 1.2"
 # https://github.com/vmg/redcarpet
