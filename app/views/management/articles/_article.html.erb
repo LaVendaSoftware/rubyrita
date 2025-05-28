@@ -1,0 +1,22 @@
+<div id="<%= dom_id article %>" class="container sm:w-auto my-5 space-y-5">
+  <div>
+    <strong class="block font-medium mb-1">Category:</strong>
+    <%= article.category_id %>
+  </div>
+  <div>
+    <strong class="block font-medium mb-1">Title:</strong>
+    <%= article.title %>
+  </div>
+  <div>
+    <strong class="block font-medium mb-1">Slug:</strong>
+    <%= article.slug %>
+  </div>
+  <div class="article-content">
+    <strong class="block font-medium mb-1">Content:</strong>
+    <%= article.content.html_safe %>
+  </div>
+  <div>
+    <strong class="block font-medium mb-1">Publish date:</strong>
+    <%= article.publish_date %>
+  </div>
+</div>

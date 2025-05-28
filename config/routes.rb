@@ -15,4 +15,9 @@ Rails.application.routes.draw do
   resource :session
   resources :passwords, param: :token
   resources :articles, only: [:index, :show], param: :slug
+
+  namespace :management do
+    root "home#index"
+    resources :articles
+  end
 end
