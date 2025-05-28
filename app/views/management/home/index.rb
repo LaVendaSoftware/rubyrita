@@ -6,12 +6,7 @@ class Views::Management::Home::Index < Views::Base
 
       Separator(as: :hr, orientation: :horizontal, class: "mt-4")
 
-      Link(href: management_root_path, class: "text-primary") do
-        "⚙️ Home"
-      end
-      Separator(as: :hr, orientation: :horizontal)
-
-      Link(href: articles_path, class: "text-primary") do
+      Link(href: management_articles_path, class: "text-primary") do
         "✏️ Administra artigos"
       end
       Separator(as: :hr, orientation: :horizontal)
