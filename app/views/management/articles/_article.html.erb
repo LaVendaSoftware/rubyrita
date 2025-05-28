@@ -11,9 +11,9 @@
     <strong class="block font-medium mb-1">Slug:</strong>
     <%= article.slug %>
   </div>
-  <div>
+  <div class="article-content">
     <strong class="block font-medium mb-1">Content:</strong>
-    <%= article.content %>
+    <%= article.content.html_safe %>
   </div>
   <div>
     <strong class="block font-medium mb-1">Publish date:</strong>
