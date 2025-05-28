@@ -18,5 +18,6 @@ Rails.application.routes.draw do
 
   namespace :management do
     root "home#index"
+    resources :articles
   end
 end
