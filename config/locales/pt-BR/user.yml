@@ -1,0 +1,16 @@
+pt-BR:
+  activerecord:
+    models:
+      user:
+        one: "Usuário"
+        zero: "Usuários"
+        other: "Usuários"
+    attributes:
+      user:
+        email: "E-mail"
+        password: "Senha"
+        role: "Papel"
+      user/roles:
+        standard: "Padrão"
+        manager: "Gerenciador"
+        developer: "Developer"
