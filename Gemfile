@@ -39,7 +39,7 @@ group :development, :test do
   # https://github.com/LaVendaSoftware/craby#usage
   gem "craby", "~> 0.0.5"
   # https://github.com/railsjazz/rails_live_reload#usage
-  gem "rails_live_reload", "~> 0.4.0"
+  gem "rails_live_reload", "~> 0.5.0"
   # https://rubyui.com/docs/introduction
   gem "ruby_ui", "~> 1.0", require: false
 end
