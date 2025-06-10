@@ -54,6 +54,6 @@ end
 # https://www.phlex.fun/introduction
 gem "phlex-rails", "~> 2.3"
 # https://github.com/gjtorikian/tailwind_merge?tab=readme-ov-file#usage
-gem "tailwind_merge", "~> 1.2"
+gem "tailwind_merge", "~> 1.3"
 # https://github.com/vmg/redcarpet
 gem "redcarpet", "~> 3.6"
